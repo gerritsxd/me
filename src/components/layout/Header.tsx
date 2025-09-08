@@ -8,9 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navLinks = [
   { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
-  { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -22,7 +20,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Code2 className="h-6 w-6 text-primary" />
-          <span className="font-bold">FolioForge</span>
+          <span className="font-bold">Gerrit</span>
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
@@ -51,7 +49,7 @@ export function Header() {
                   onClick={() => setIsOpen(false)}
                 >
                   <Code2 className="h-6 w-6 text-primary" />
-                  <span className="font-bold">FolioForge</span>
+                  <span className="font-bold">Gerrit</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map((link) => (
