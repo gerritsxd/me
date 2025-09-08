@@ -66,7 +66,7 @@ export function ProjectCarousel() {
             <CardContent>
               <p className="text-muted-foreground mb-4">Check out my latest work in progress.</p>
               <Button asChild>
-                <Link href="http://149.202.53.23:8080" target="_blank">
+                <Link href="https://tatat.gerritsxd.com" target="_blank">
                   <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                 </Link>
               </Button>
