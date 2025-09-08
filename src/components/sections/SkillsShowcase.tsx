@@ -20,17 +20,17 @@ const skills = [
 
 export function SkillsShowcase() {
   return (
-    <section id="skills" className="w-full">
-      <Card>
+    <section id="skills" className="w-full scroll-mt-20">
+      <Card className="bg-card/50">
         <CardHeader>
-          <CardTitle>Skills Showcase</CardTitle>
+          <CardTitle className="text-3xl font-bold tracking-tight">Skills Showcase</CardTitle>
           <CardDescription>My technical proficiency and expertise.</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
             {skills.map((skill) => (
               <div key={skill.name}>
-                <div className="mb-1 flex items-center justify-between">
+                <div className="mb-2 flex items-center justify-between">
                   <span className="font-medium">{skill.name}</span>
                   <span className="text-sm text-muted-foreground">
                     {skill.level}%

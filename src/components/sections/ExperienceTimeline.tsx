@@ -36,41 +36,36 @@ const timelineItems = [
 
 export function ExperienceTimeline() {
   return (
-    <section id="experience" className="w-full">
-      <Card>
-        <CardHeader>
-          <CardTitle>Work & Education</CardTitle>
-          <CardDescription>
-            My professional journey and academic background.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="relative pl-8 before:absolute before:left-4 before:top-0 before:h-full before:w-px before:bg-border">
-            {timelineItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative pb-12 last:pb-0"
-              >
-                <div className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-background">
+    <section id="experience" className="w-full scroll-mt-20">
+      <h2 className="mb-8 text-center text-3xl font-bold tracking-tight md:text-4xl">
+        Work & Education
+      </h2>
+      <div className="relative pl-6 after:absolute after:inset-y-0 after:left-8 after:w-0.5 after:bg-border">
+        {timelineItems.map((item, index) => (
+          <div
+            key={index}
+            className="relative grid grid-cols-[auto_1fr] items-start gap-x-6 pb-12 last:pb-0"
+          >
+            <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-background">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-background">
                   {item.type === 'work' ? (
-                    <Briefcase className="h-4 w-4 text-primary" />
+                    <Briefcase className="h-6 w-6 text-primary" />
                   ) : (
-                    <GraduationCap className="h-4 w-4 text-primary" />
+                    <GraduationCap className="h-6 w-6 text-primary" />
                   )}
                 </div>
-                <div className="pl-4">
-                  <p className="text-sm text-muted-foreground">{item.date}</p>
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="font-medium text-primary">{item.institution}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+            </div>
+            <div className="pt-2">
+              <p className="text-sm text-muted-foreground">{item.date}</p>
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="font-medium text-primary">{item.institution}</p>
+              <p className="mt-2 text-muted-foreground">
+                {item.description}
+              </p>
+            </div>
           </div>
-        </CardContent>
-      </Card>
+        ))}
+      </div>
     </section>
   );
 }
