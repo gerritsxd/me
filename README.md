@@ -1,5 +1,3 @@
-# Firebase Studio
+# Personal Website
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+A simple, fast, and clean personal website with a retro computer aesthetic.
